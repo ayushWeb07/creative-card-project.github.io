@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sec {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col1 {
+    width: 30vw;
+    height: 100vh;
+    background-image: url("./images/bg-main-desktop.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card1 {
+    width: 447px;
+    height: 245px;
+    background-image: url("./images/bg-card-front.png");
+    margin-left: 60%;
+    z-index: 10;
+    margin-bottom: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+#card_number, #card_numberMobile {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 5%;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 5% 5% 5%;
+    width: 90%;
+}
+
+#name, #nameMobile {
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#date {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card2 {
+    width: 447px;
+    height: 245px;
+    background-image: url("./images/bg-card-back.png");
+    margin-left: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 0 100px -60px black;
+}
+
+#cvc, #cvcMobile {
+    padding: 0 15%;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.col2 {
+    width: 70vw;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 30%;
+    padding-right: 20%;
+}
+
+label {
+    color: black;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+input::placeholder {
+    font-weight: 400;
+}
+
+input {
+    padding: 5px 10px;
+    outline: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: #230930;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 100%;
+}
+
+input:focus {
+    border: 2px solid #230930;
+}
+
+#formMonth {
+    width: 15%;
+}
+
+#formYear {
+    width: 15%;
+}
+
+#formCvc {
+    width: 100%;
+}
+
+.formSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#submit {
+    background: #230930;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    border: 1px solid #230930;
+    border-radius: 5px;
+    width: 110%;
+}
+
+
+/* Confirmation message */
+
+.confirm_message {
+    text-align: center;
+    display: none;
+}
+
+.confirm_message>img {
+    width: 70px;
+}
+
+#confirm_head {
+    color: #230930;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+#confirm_para {
+    color: #230930;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+#continue {
+    background: #230930;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    border: 1px solid #230930;
+    border-radius: 5px;
+}
+
+.col1_mobile {
+    display: none;
+}
+
+.col1_mobile_card2 {
+    display: none;
+}
+
+@media only screen and (min-width: 860px) and (max-width:980px) {
+    .card1 {
+        margin-left: 80%;
+    }
+}
+
+
+@media only screen and (min-width: 750px) and (max-width:859px) {
+    .card1 {
+        margin-left: 100%;
+    }
+
+    #submit {
+        width: 114%;
+    }
+}
+
+
+@media only screen and (min-width: 340px) and (max-width:800px) {
+
+    .sec {
+        flex-direction: column;
+        justify-content: flex-start;
+
+    }
+
+    .col1 {
+        display: none;
+    }
+
+    .col1_mobile {
+        display: block;
+        height: 30%;
+        width: 100%;
+        background-image: url(./images/bg-main-mobile.png);
+        padding: 5%;
+    }
+
+    .col1_mobile_card1 {
+        display: block;
+        width: 85%;
+        height: 100%;
+        margin-left: auto;
+        background-image: url(./images/bg-card-back.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        box-shadow: 0 0 100px -60px black;
+    }
+
+    .col1_mobile_card2 {
+        width: 85%;
+        height: 35%;
+        margin-right: auto;
+        margin-left: 5%;
+        position: relative;
+        margin-top: -13%;
+        background-image: url(./images/bg-card-front.png);
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .col2 {
+        height: 70%;
+        background: white;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 5%;
+    }
+
+    #submit{
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width: 340px) and (max-width:400px){
+
+    .col1_mobile_card2 {
+        margin-top: -25%;
+    }
+
+}
+
+
+@media only screen and (min-width: 401px) and (max-width:450px){
+    .col1_mobile_card2 {
+        margin-top: -22%;
+    }
+}
+
+
+@media only screen and (min-width: 451px) and (max-width:500px){
+    .col1_mobile_card2 {
+        margin-top: -20%;
+    }
+}
+
+
+@media only screen and (min-width: 501px) and (max-width:550px){
+    .col1_mobile_card2 {
+        margin-top: -18%;
+    }
+}
+
+
+@media only screen and (min-width: 551px) and (max-width:600px){
+    .col1_mobile_card2 {
+        margin-top: -16%;
+    }
+}
+
+
+@media only screen and (min-width: 601px) and (max-width:650px){
+    .col1_mobile_card2 {
+        margin-top: -15%;
+    }
+}
+
+
+@media only screen and (min-width: 720px) and (max-width:800px){
+    .col1_mobile_card2 {
+        margin-top: -11%;
+    }
+}
